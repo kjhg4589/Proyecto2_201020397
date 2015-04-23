@@ -1,0 +1,11 @@
+{% extends 'MasterLogin.html' %}
+{% block title %}
+	Login
+{% endblock %}
+{% block content %}
+	 <form action="." method="POST">
+		 {% csrf_token %}
+		 {{form.as_p}}
+		 <p><input type="submit" value="Login" /></p>
+	 </form>
+{% endblock %}

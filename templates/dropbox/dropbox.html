@@ -1,0 +1,13 @@
+{% extends 'Master.html' %}
+{% block header %}
+	<h1>Dropbox</h1>
+	<nav>
+		<a href="/dropbox/crear/">Crear Carpeta</a>
+		<a href="/dropbox/agregar/">Agregar Archivo</a>
+		<a href="/dropbox/">Logout</a>
+	</nav>
+	<br><br>
+{% endblock %}
+{% block content %}
+	{{nodo.root.nombre}}
+{% endblock %}

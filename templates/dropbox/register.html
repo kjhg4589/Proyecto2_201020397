@@ -1,0 +1,21 @@
+{% extends 'MasterLogin.html' %}
+{% block title %}
+	Login
+{% endblock %}
+{% block content %}
+{% if info_enviado %}
+	Gracias por registrarse sus datos son los siguientes
+	<br>
+	<p>Email utilizado: {{email}}</p>
+
+	<p>Contrasena utilizado: {{pasword}}</p>
+
+	Ahora ya puede ingresar a la pagina
+{% else %}
+	 <form action="." method="POST">
+		 {% csrf_token %}
+		 {{form.as_p}}
+		 <p><input type="submit" value="Regitrar" /></p>
+	 </form>
+{% endif %}
+{% endblock %}

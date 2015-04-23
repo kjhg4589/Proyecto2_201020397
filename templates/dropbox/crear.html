@@ -1,0 +1,15 @@
+{% extends 'Master.html' %}
+{% block header %}
+	<h1>Dropbox</h1>
+	<nav>
+		<a href="/dropbox/dropbox/">Cancelar</a>
+	</nav>
+	<br><br>
+{% endblock %}
+{% block content %}
+	<form action="." method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<p><input type="submit" value="Crear" /></p>
+	</form>
+{% endblock %}
