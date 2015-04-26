@@ -2,7 +2,6 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from apps.dropbox.forms import login, register, crear
 from apps.WebService.Servicios import lista
-from django.http import HttpResponseRedirect
 
 def login_view(request):
 	if request.method == "POST":

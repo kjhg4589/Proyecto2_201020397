@@ -1,14 +1,9 @@
 __author__ = 'kevin'
 
-class root(object):
-	def __init__(self):
-		self.nombre = "root"
-
 class nodoUsuarios(object):
 	def __init__(self, email, password):
 		self.email = email
 		self.password = password
-		self.root = root
 		self.sig = None
 		self.ant = None
 
@@ -59,4 +54,4 @@ class listaUsuarios(object):
 				text = text + "u"+nodo.email.replace("@", "").replace(".", "")+"->u"+nodo.ant.email.replace("@", "").replace(".", "")+";"
 		return text
 
-lista = listaUsuarios(None)
+lista = listaUsuarios()
